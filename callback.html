@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Rethreads Callback</title></head>
+<body>
+<script>
+  // 把 URL 裡的 code 參數顯示出來
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  if (code) {
+    document.body.innerHTML = '<h2>授權成功！</h2><p>Code: ' + code + '</p><p>請複製上方 code 並回報給開發者。</p>';
+  } else {
+    document.body.innerHTML = '<h2>等待授權中...</h2>';
+  }
+</script>
+</body>
+</html>
